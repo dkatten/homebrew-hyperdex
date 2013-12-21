@@ -5,7 +5,7 @@ class Replicant < Formula
   url 'http://hyperdex.org/src/replicant-0.3.1.tar.gz'
   sha1 'ba8022e40568ebcc6e56e80b7d7119694c18ad01'
 
-  depends_on 'gcc48'
+  depends_on 'gcc48' => :build
   depends_on 'hyperleveldb'
   depends_on 'sparsehash'
   depends_on 'popt'

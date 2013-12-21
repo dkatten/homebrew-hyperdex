@@ -5,7 +5,7 @@ class Libpo6 < Formula
   url 'http://hyperdex.org/src/libpo6-0.4.1.tar.gz'
   sha1 '5e4014a37dd2d37458f3fe2596641f182a7636ca'
 
-  depends_on 'gcc48'
+  depends_on 'gcc48' => :build
 
   def install
     cxxstdlib_check :skip

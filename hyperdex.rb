@@ -5,7 +5,7 @@ class Hyperdex < Formula
   url 'http://hyperdex.org/src/hyperdex-1.0.1.tar.gz'
   sha1 'c8233c0de6b7b41d79f7c3d9a2633a5f754ec989'
 
-  depends_on 'gcc48'
+  depends_on 'gcc48' => :build
   depends_on 'replicant'
   depends_on 'sparsehash'
   depends_on 'python'

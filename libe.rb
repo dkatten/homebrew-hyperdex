@@ -5,7 +5,7 @@ class Libe < Formula
   url 'http://hyperdex.org/src/libe-0.4.1.tar.gz'
   sha1 'e30607fbc4f028c1c9952c677eea72e83b31da96'
 
-  depends_on 'gcc48'
+  depends_on 'gcc48' => :build
   depends_on 'libpo6'
 
   def install

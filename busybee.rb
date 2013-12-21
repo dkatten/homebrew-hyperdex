@@ -5,7 +5,7 @@ class Busybee < Formula
   url 'http://hyperdex.org/src/busybee-0.4.0.tar.gz'
   sha1 '5574a2cdfc196395604633fed584d99b892b53ea'
 
-  depends_on 'gcc48'
+  depends_on 'gcc48' => :build
   depends_on 'libe'
 
   def install
