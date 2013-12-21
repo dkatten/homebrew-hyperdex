@@ -6,6 +6,10 @@ class Busybee < Formula
   sha1 '5574a2cdfc196395604633fed584d99b892b53ea'
 
   depends_on 'gcc48' => :build
+  depends_on 'autoconf'
+  depends_on 'autoconf-archive'
+  depends_on 'libtool'
+  depends_on 'automake'
   depends_on 'libe'
 
   def install
@@ -15,6 +19,7 @@ class Busybee < Formula
     ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.8"
     ENV['LD']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
 
+    system "autoreconf -if"
     system "./configure", "--prefix=#{prefix}", "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib",
       "PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include", "E_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -le\"",
       "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include"
