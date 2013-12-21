@@ -1,11 +1,13 @@
 require 'formula'
 
-class Libpo6 < Formula
-  homepage 'http://hyperdex.org'
-  url 'http://hyperdex.org/src/libpo6-0.4.1.tar.gz'
-  sha1 '5e4014a37dd2d37458f3fe2596641f182a7636ca'
+class Sparsehash < Formula
+  homepage 'https://code.google.com/p/sparsehash/'
+  url 'https://sparsehash.googlecode.com/files/sparsehash-2.0.2.tar.gz'
+  sha1 '12c7552400b3e20464b3362286653fc17366643e'
 
   depends_on 'gcc48'
+  depends_on 'glog'
+  depends_on 'popt'
 
   def install
     cxxstdlib_check :skip
@@ -13,8 +15,8 @@ class Libpo6 < Formula
     ENV['CC']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
     ENV['CXX']="#{HOMEBREW_PREFIX}/bin/g++-4.8"
     ENV['LD']="#{HOMEBREW_PREFIX}/bin/gcc-4.8"
-    
+
     system "./configure", "--prefix=#{prefix}"
-    system "make install"
+    system "make", "install"
   end
 end
