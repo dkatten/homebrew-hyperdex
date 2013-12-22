@@ -1,4 +1,4 @@
-Homebrew tap for HyperDex.
+Homebrew tap for [HyperDex](http://hyperdex.org/).
 
 ## Installation
 `brew tap homebrew/dupes`
