@@ -3,7 +3,7 @@ Homebrew tap for [HyperDex](http://hyperdex.org/).
 ## Installation
 `brew tap homebrew/dupes`
 
-`brew tap TimothyKlim/homebrew-hyperdex && brew install hyperdex`
+`brew tap objectundefined/homebrew-hyperdex && brew install hyperdex`
 
 ## Caveats
 
