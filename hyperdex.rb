@@ -25,7 +25,7 @@ class Hyperdex < Formula
     system "mkdir osx"
     system "curl -o osx/ieee754.h https://raw.github.com/rescrv/HyperDex/master/osx/ieee754.h"
     system "./configure", "--prefix=#{prefix}", "--enable-java-bindings", "--enable-ruby-bindings",
-      "--enable-python-bindings", "CXXFLAGS=-DOS_MACOSX",
+      "CXXFLAGS=-DOS_MACOSX",
       "PO6_LIBS=-L#{HOMEBREW_PREFIX}/lib", "PO6_CFLAGS=-I#{HOMEBREW_PREFIX}/include",
       "E_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -le\"", "E_CFLAGS=-I#{HOMEBREW_PREFIX}/include",
       "BUSYBEE_LIBS=\"-L#{HOMEBREW_PREFIX}/lib -lbusybee\"", "BUSYBEE_CFLAGS=-I#{HOMEBREW_PREFIX}/include",
